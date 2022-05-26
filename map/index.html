@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>tonestrukt editions</title>
+	<meta name="description" content="record label of new classical, field-recording, and experimental sounds" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<!-- <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.1.1/maplibre-gl.js"></script> -->
+	<script src="https://unpkg.com/maplibre-gl@2.1.6/dist/maplibre-gl.js"></script>
+	<link href="https://cdn.maptiler.com/maplibre-gl-js/v2.1.1/maplibre-gl.css" rel="stylesheet" />	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+SC:wght@100;300;400;500&display=swap" rel="stylesheet"> 
+	<style>
+		#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	</style>
+</head>
+
+<body>
+<div id="map"></div>
+<script type="text/javascript">
+
+	maplibregl.setRTLTextPlugin(
+		'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
+		null,
+		true // Lazy load the plugin
+	);
+
+	var map = new maplibregl.Map({
+		container: "map",
+		style: "https://api.maptiler.com/maps/voyager/style.json?key=LItPegLLkWPvaA6LSosX",
+		center: [10, 20],
+		zoom: 1.02,
+		localIdeographFontFamily: "'Noto Sans', 'Noto Sans SC', sans-serif"
+	});
+
+	var berlin = new maplibregl.Marker()
+		.setLngLat([13.40, 52.52])
+		.addTo(map);
+	var denhaag = new maplibregl.Marker()
+		.setLngLat([4.28, 52.07])
+		.addTo(map);
+	var jinan = new maplibregl.Marker()
+		.setLngLat([116.99, 36.66])
+		.addTo(map);
+	var linz = new maplibregl.Marker()
+		.setLngLat([14.28, 48.30])
+		.addTo(map);
+	var losangeles = new maplibregl.Marker()
+		.setLngLat([-118.24, 34.05])
+		.addTo(map);
+	var reykjavik = new maplibregl.Marker()
+		.setLngLat([-21.82, 64.12])
+		.addTo(map);
+	var tokyo = new maplibregl.Marker()
+		.setLngLat([139.83, 35.65])
+		.addTo(map);
+	var wenzhou = new maplibregl.Marker()
+		.setLngLat([120.66, 27.99])
+		.addTo(map);
+	map.scrollZoom.disable();
+	//map.scrollZoom.setZoomRate(1/300);
+</script>
+	
+</body>
+</html>
