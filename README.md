@@ -1,2 +1,2 @@
-# tonestrukt-editions
-tiddlywiki for tonestrukt editions
+# Tonestrukt Editions
+TiddlyWiki for Tonestrukt Editions
